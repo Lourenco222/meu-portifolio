@@ -24,7 +24,7 @@ const Sobre = () => {
             <h3>🎓 Formação Académica</h3>
             <ul>
               <li>Escola Secundária Eduardo Mondlane (2016–2021)</li>
-              <li>Licenciando em Informática de Sistemas – ISICOM (4º ano)</li>
+              <li>Licenciando em Informática de Sistemas – ISCIM (4º ano)</li>
             </ul>
           </div>
         </div>
