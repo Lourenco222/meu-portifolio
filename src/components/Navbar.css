@@ -1,0 +1,52 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-nav);
+  color: var(--text);
+  z-index: 100;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a {
+  position: relative;
+  padding: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+.nav-links a:hover::after,
+.nav-links .active::after {
+  width: 100%;
+}
+.theme-toggle {
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.theme-toggle:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+.logo img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%; /* se quiser como avatar redondo */
+  object-fit: cover;
+  cursor: pointer;
+}

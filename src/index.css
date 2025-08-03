@@ -1,0 +1,82 @@
+/* ========================
+   VARIÁVEIS DE TEMA
+======================== */
+:root {
+  --font-main: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg-body: #0f172a;
+  --text: #ffffff;
+  --accent: #38bdf8;
+  --bg-nav: #0a192f;
+
+  font-family: var(--font-main);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: var(--text);
+  background-color: var(--bg-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="light"] {
+  --bg-body: #ffffff;
+  --text: #213547;
+  --accent: #0ea5e9;
+  --bg-nav: #f0f4f8;
+  color-scheme: light;
+}
+
+/* ========================
+   RESET E ELEMENTOS
+======================== */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background-color: var(--bg-body);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0ea5e9;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

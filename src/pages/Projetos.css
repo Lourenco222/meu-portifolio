@@ -1,0 +1,77 @@
+.projetos {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: var(--text);
+  padding: 4rem 2rem;
+}
+
+.projetos h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.grid-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card-projeto {
+  background-color: rgba(15, 23, 42, 0.6);
+  padding: 1.8rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-projeto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.card-projeto h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.card-projeto p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.tecnologias {
+  margin-bottom: 1rem;
+}
+
+.tag-tech {
+  display: inline-block;
+  background-color: #334155;
+  color: var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.links a {
+  color: var(--accent);
+  margin-right: 1rem;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #facc15; /* amarelo claro */
+}
