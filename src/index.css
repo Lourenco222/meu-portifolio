@@ -10,8 +10,8 @@
   --bg-secondary: #1e293b;
   --text: #f8fafc;
   --text-muted: #94a3b8;
-  --accent: #facc15;
-  --accent-hover: #fbbf24;
+  --accent: #06b6d4;
+  --accent-hover: #0891b2;
   --bg-nav: #0a192f;
   --border-color: #334155;
 
@@ -32,8 +32,8 @@
   --bg-secondary: #ffffff;
   --text: #1e293b;
   --text-muted: #64748b;
-  --accent: #0ea5e9;
-  --accent-hover: #0284c7;
+  --accent: #0891b2;
+  --accent-hover: #0e7490;
   --bg-nav: #e2e8f0;
   --border-color: #cbd5e1;
   color-scheme: light;
