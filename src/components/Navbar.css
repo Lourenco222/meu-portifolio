@@ -7,18 +7,50 @@
   align-items: center;
   background: var(--bg-nav);
   color: var(--text);
-  z-index: 100;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: background 0.3s, color 0.3s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   position: relative;
-  padding: 0.5rem;
-  color: inherit;
+  padding: 0.5rem 0;
+  color: var(--text);
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
   transition: color 0.3s;
 }
+
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -29,24 +61,83 @@
   background: var(--accent);
   transition: width 0.3s;
 }
+
 .nav-links a:hover::after,
 .nav-links .active::after {
   width: 100%;
 }
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--accent);
+}
+
 .theme-toggle {
   background: transparent;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   cursor: pointer;
   transition: transform 0.3s ease;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .theme-toggle:hover {
-  transform: rotate(15deg) scale(1.1);
+  transform: rotate(20deg) scale(1.2);
 }
-.logo img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%; /* se quiser como avatar redondo */
-  object-fit: cover;
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--text);
   cursor: pointer;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-nav);
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+    max-height: 400px;
+    padding: 1rem 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .theme-toggle-li {
+    padding-top: 0.5rem;
+  }
+
+  .logo-text {
+    display: none;
+  }
 }

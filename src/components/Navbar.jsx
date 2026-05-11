@@ -3,11 +3,10 @@ import { Link } from 'react-scroll';
 import './Navbar.css';
 import perfil from '../assets/img/perfil.jpeg';
 
-
 const Navbar = () => {
   const [theme, setTheme] = useState('dark');
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Ao iniciar, pega o tema salvo ou padrão
   useEffect(() => {
     const saved = localStorage.getItem('theme') || 'dark';
     setTheme(saved);
@@ -23,18 +22,27 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
- <div className="logo">
-  <img src={perfil} alt="Lourenco Vasco" />
-</div>
+      <div className="logo">
+        <img src={perfil} alt="Lourenco Vasco Manhica" />
+        <span className="logo-text">Lourenco Vasco</span>
+      </div>
 
-      <ul className="nav-links">
-        {['home','sobre','projetos','contacto'].map(sec => (
-          <li key={sec}>
+      <button 
+        className="menu-toggle" 
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        {menuOpen ? '✕' : '☰'}
+      </button>
+
+      <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+        {['home', 'sobre', 'projetos', 'contato'].map((sec) => (
+          <li key={sec} onClick={() => setMenuOpen(false)}>
             <Link
               to={sec}
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-80}
               duration={500}
               activeClass="active"
             >
@@ -42,10 +50,12 @@ const Navbar = () => {
             </Link>
           </li>
         ))}
+        <li className="theme-toggle-li">
+          <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle Theme">
+            {theme === 'light' ? '🌞' : '🌙'}
+          </button>
+        </li>
       </ul>
-      <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle Theme">
-        {theme === 'light' ? '🌞' : '🌙'}
-      </button>
     </nav>
   );
 };

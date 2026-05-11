@@ -1,5 +1,5 @@
 import './Contato.css';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
 
 const Contato = () => {
   return (
@@ -8,16 +8,24 @@ const Contato = () => {
         <h2>Contato</h2>
         <ul className="lista-contato">
           <li>
+            <FaMapMarkerAlt className="icon" />
+            <span>Maputo, Moçambique</span>
+          </li>
+          <li>
             <FaPhoneAlt className="icon" />
-            <span>+258 844 479 683 / +258 861 178 419</span>
+            <span>+258 844 479 683</span>
+          </li>
+          <li>
+            <FaWhatsapp className="icon" />
+            <a href="https://wa.me/258844479683" target="_blank" rel="noopener noreferrer">
+              +258 844 479 683 (WhatsApp)
+            </a>
           </li>
           <li>
             <FaEnvelope className="icon" />
-            <span>lourencovasco696@gmail.com</span>
-          </li>
-          <li>
-            <FaMapMarkerAlt className="icon" />
-            <span>Ferroviário, Q.42 Casa nº18, Maputo</span>
+            <a href="mailto:lourencovasco696@gmail.com">
+              lourencovasco696@gmail.com
+            </a>
           </li>
         </ul>
       </div>

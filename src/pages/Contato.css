@@ -1,48 +1,79 @@
 .contato {
-  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  background: var(--bg-secondary);
   color: var(--text);
-  padding: 4rem 2rem;
-  min-height: 50vh;
+  padding: 5rem 2rem;
+  min-height: 60vh;
 }
 
 .contato h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: var(--accent);
-  margin-bottom: 3rem;
-  border-bottom: 2px solid var(--accent);
-  display: inline-block;
-  padding-bottom: 0.5rem;
+  margin-bottom: 3.5rem;
+  font-weight: 700;
 }
 
 .lista-contato {
   list-style: none;
-  max-width: 400px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .lista-contato li {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #e2e8f0;
-  background-color: rgba(15, 23, 42, 0.6);
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  border: 1px solid #334155;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease;
+  color: var(--text);
+  background-color: var(--bg-body);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .lista-contato li:hover {
-  background-color: rgba(250, 204, 21, 0.2); /* amarelo suave */
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent);
+}
+
+.lista-contato a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lista-contato a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 
 .icon {
   color: var(--accent);
-  min-width: 24px;
-  min-height: 24px;
+  min-width: 28px;
+  min-height: 28px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .contato {
+    padding: 3rem 1.5rem;
+  }
+
+  .contato h2 {
+    font-size: 2rem;
+  }
+
+  .lista-contato li {
+    font-size: 1rem;
+    padding: 1.25rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
 }

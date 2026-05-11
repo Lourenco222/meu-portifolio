@@ -4,51 +4,35 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 const projetos = [
   {
     id: 1,
-    nome: 'Sistema de Gestão de Atletas (SAGA)',
-    descricao: 'Sistema web para gerenciar dados e performance de atletas, com autenticação, CRUD e relatórios.',
-    tecnologias: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
-    github: 'https://github.com/seuusuario/saga',
+    nome: 'Plataforma de Serviços Técnicos',
+    descricao: 'Desenvolvimento de plataforma de intermediação para serviços de reparação de eletrodomésticos, com autenticação JWT, sistema de ofertas, chat em tempo real, geolocalização e dashboards administrativos.',
+    tecnologias: ['FastAPI', 'SQLAlchemy', 'React', 'Redux Toolkit', 'TypeScript', 'Leaflet'],
+    github: '',
     demo: '',
   },
   {
     id: 2,
     nome: 'App ChatGPT via SMS',
-    descricao: 'Aplicativo mobile que permite interação com ChatGPT via mensagens SMS.',
-    tecnologias: ['React Native', 'Node.js', 'Twilio API'],
-    github: 'https://github.com/seuusuario/chatgpt-sms',
+    descricao: 'Desenvolvimento de aplicação móvel capaz de receber mensagens SMS no dispositivo Android, processar automaticamente o conteúdo através da API da OpenAI e responder ao remetente por SMS sem necessidade de acesso direto à aplicação.',
+    tecnologias: ['React Native', 'OpenAI API', 'Android'],
+    github: '',
     demo: '',
   },
   {
     id: 3,
     nome: 'Sistema de Denúncias',
-    descricao: 'Plataforma para registo e gestão de denúncias com fluxos completos e notificações via e-mail.',
+    descricao: 'Sistema de gestão de denúncias com autenticação, gestão de estados, notificações por email e exportação de relatórios PDF/Excel.',
     tecnologias: ['Spring Boot', 'ZK Framework', 'PostgreSQL'],
     github: '',
     demo: '',
   },
   {
     id: 4,
-    nome: 'Lista de Produtos',
-    descricao: 'Aplicação web para listagem e filtragem de produtos, integrada com MockAPI e deploy na Vercel.',
-    tecnologias: ['React', 'MockAPI', 'Vercel'],
-    github: 'https://github.com/seuusuario/lista-produtos',
-    demo: 'https://seusite.vercel.app',
-  },
-  {
-    id: 5,
-    nome: 'Sistema Acadêmico Faculdade',
-    descricao: 'Projeto acadêmico desenvolvido em Laravel e MySQL para gestão de dados acadêmicos.',
-    tecnologias: ['Laravel', 'MySQL', 'PHP'],
+    nome: 'SAGA — Sistema de Gestão de Atletas',
+    descricao: 'Sistema web para gestão de atletas com autenticação, dashboards estatísticos e operações CRUD completas.',
+    tecnologias: ['Laravel', 'PHP', 'MySQL'],
     github: '',
     demo: '',
-  },
-  {
-    id: 6,
-    nome: 'Portfólio React + Vite',
-    descricao: 'Site pessoal para apresentar projetos, habilidades e contato, com design moderno e responsivo.',
-    tecnologias: ['React', 'Vite', 'CSS Modules'],
-    github: 'https://github.com/seuusuario/portfolio-react',
-    demo: 'https://seusite.netlify.app',
   },
 ];
 
@@ -70,12 +54,12 @@ const Projetos = () => {
               <div className="links">
                 {github && (
                   <a href={github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <FaGithub size={20} />
+                    <FaGithub size={22} />
                   </a>
                 )}
                 {demo && (
                   <a href={demo} target="_blank" rel="noopener noreferrer" aria-label="Demo">
-                    <FaExternalLinkAlt size={18} />
+                    <FaExternalLinkAlt size={20} />
                   </a>
                 )}
               </div>
